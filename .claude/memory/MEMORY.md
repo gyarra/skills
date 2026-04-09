@@ -1,0 +1,7 @@
+- [Skill naming](feedback_skill_naming.md) — s- prefix, s-pr- for PR skills, "Use when..." descriptions
+- [Checklist as file read](feedback_checklist_as_file_read.md) — s-code-review-checklist is read as file, not invoked
+- [Docker fail fast](feedback_docker_fail_fast.md) — Let init.sh fail on missing seeds, no fallback defaults
+- [Settings file placement](feedback_settings_files.md) — settings.json for shared/project, settings.local.json for personal/paths
+- [Branch before reset](feedback_branch_before_reset.md) — When moving commits off main, create feature branch FIRST, then reset main
+- [Ovrtone reference](reference_ovrtone.md) — Skills adapted from ovrtone at /Users/yarray/development/ovrtone/ovrtone/
+- [Personal skills](reference_personal_skills.md) — ~/.agents/skills/ not loaded by Claude Code, need plugin install
