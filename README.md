@@ -1,12 +1,12 @@
 # Skills
 
-Claude Code skills, settings, and Docker harness for autonomous coding sessions.
+Gabe's personal Claude Code skills, settings, and Docker harness for autonomous coding sessions.
 
 ## Workflow
 
 1. **Write requirements.** Use the [`s-requirements-writing`](.claude/skills/s-requirements-writing/SKILL.md) skill to draft a GitHub issue with clear acceptance criteria.
 
-2. **Spin up Docker.** Start a containerized Claude Code session with the dangerous flag (skips permission prompts so the agent can run autonomously). See [`docs/claude-docker.md`](docs/claude-docker.md) for the run modes and the exact commands.
+2. **Spin up Docker.** Start a containerized Claude Code session with the dangerous flag (skips permission prompts so the agent can run autonomously). See [`docs/claude-docker.md`](docs/claude-docker.md) for the run modes and the exact commands. The dangerous flag isn't an issue because it's running in a Docker container.
 
 3. **Prompt the session.** Paste the [Session Start](docs/claude-docker.md#session-start) block from `claude-docker.md` as the initial prompt, replacing the issue URL with the new one. This tells the agent to track environment + skill issues and points it at the issue to ship.
 
@@ -15,6 +15,8 @@ Claude Code skills, settings, and Docker harness for autonomous coding sessions.
    - [`s-implement-plan`](.claude/skills/s-implement-plan/SKILL.md) — write the code and tests
    - [`s-frontend-visual-review`](.claude/skills/s-frontend-visual-review/SKILL.md) — visual check (if frontend changed)
    - [`s-pr-pre-push-review`](.claude/skills/s-pr-pre-push-review/SKILL.md) — self-review against the [code review checklist](.claude/skills/s-code-review-checklist/SKILL.md), then push and open the PR
+
+The Ship Feature has gatechecks to prevent skipping steps.
 
 5. **Automated review.** GitHub Copilot and Codex automatically review the PR and any follow-up commits, posting their comments directly on the PR.
 
